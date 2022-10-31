@@ -4,13 +4,8 @@ $connect = connection();
 $id = $_GET['id'];
 $sql = "SELECT * FROM tasks WHERE id=$id";
 $result=mysqli_query($connect,$sql);
-if($result){
+if($result)
     $row = mysqli_fetch_assoc($result);
-    $_SESSION['message'] = "data mcha o jat!";
-}
-else{
-    echo "<script>alert(\"sdta mamchatch :(\");</script>";
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">

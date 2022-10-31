@@ -123,9 +123,8 @@
         $date = $_POST['date_time'];
         $description = $_POST['description'];
         $sql = "UPDATE tasks SET title='$title',type='$type',status='$status',priority='$priority',date_time='$date',description='$description' WHERE id=$id";
-
         $result=mysqli_query($connect,$sql);
-        $_SESSION['message'] = "data mcha o jat!";
+        $_SESSION['message'] = "Task has been updated successfully !";
         header('location: index.php');
     }
 
