@@ -69,7 +69,7 @@
 								<i class="fab fa-facebook-messenger text-blue media-object-icon"></i>
 							</div>
 							<div class="media-body">
-								<h6 class="media-heading">John Smith</h6>
+								<h6 class="media-heading">Asmae Smith</h6>
 								<p>Quisque pulvinar tellus sit amet sem scelerisque tincidunt.</p>
 								<div class="text-muted fs-10px">25 minutes ago</div>
 							</div>
@@ -114,7 +114,7 @@
 					<a href="#" class="navbar-link dropdown-toggle d-flex align-items-center" data-bs-toggle="dropdown">
 						<img src="assets/img/user/user-13.jpg" alt="" /> 
 						<span>
-							<span class="d-none d-md-inline">Jilali Smith</span>
+							<span class="d-none d-md-inline">Asmae Smith</span>
 							<b class="caret"></b>
 						</span>
 					</a>
@@ -150,7 +150,7 @@
 							<div class="menu-profile-info">
 								<div class="d-flex align-items-center">
 									<div class="flex-grow-1">
-										Jilali Smith
+										Asmae Smith
 									</div>
 									<div class="menu-caret ms-auto"></div>
 								</div>

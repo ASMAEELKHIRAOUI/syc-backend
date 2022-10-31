@@ -108,8 +108,10 @@
         $sql = "INSERT INTO tasks VALUES (null, '$title','$type','$status','$priority','$date','$description')";
         $result=mysqli_query($connect,$sql);
         //SQL INSERT
-        $_SESSION['message'] = "Task has been added successfully !";
-		header('location: index.php');
+        if($result){
+            $_SESSION['message'] = "Task has been added successfully !";
+            header('location: index.php');
+        }
     }
 
     function updateTask()
@@ -138,7 +140,9 @@
         //SQL DELETE
         $sql="DELETE FROM tasks WHERE id=$id";
         $result=mysqli_query($connect,$sql);
-        $_SESSION['message'] = "Task has been deleted successfully !";
-		header('location: index.php');
+        if($result){
+            $_SESSION['message'] = "Task has been deleted successfully !";
+		    header('location: index.php');
+        }
     }
 ?>
