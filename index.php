@@ -239,8 +239,10 @@
 				<div class="ms-md-4 mt-md-0 mt-2"><i class="far fa-clock fa-fw me-1 text-dark text-opacity-50"></i> 14 day(s)</div>
 			</div>
 
-			<?php if (isset($_SESSION['message'])): ?>
-				<div class="alert alert-green alert-dismissible fade show">
+			<?php if(isset($_SESSION['message'])){
+					if ($_SESSION['message'] == 'Task has been deleted successfully !'){
+			 ?>
+				<div class="alert alert-red alert-dismissible fade show">
 				<strong>Success!</strong>
 					<?php 
 						echo $_SESSION['message']; 
@@ -248,9 +250,17 @@
 					?>
 					<button type="button" class="btn-close" data-bs-dismiss="alert"></span>
 				</div>
-			<?php endif ?>
-			<div class="row">
-					
+			<?php } else{?>
+				<div class="alert alert-green alert-dismissible fade show">
+				<strong>Success!</strong>
+					<?php 
+						echo $_SESSION['message']; 
+						unset($_SESSION['message']);
+					?>
+					<button type="button" class="btn-close" data-bs-dismiss="alert"></span>
+				</div> 
+				<?php }} ?>
+			<div class="row">	
 				<div class="col-xl-4 col-lg-6">
 					<div class="panel panel-inverse">
 						<div class="panel-heading">

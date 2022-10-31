@@ -27,19 +27,22 @@
                     echo '<button class="d-flex p-2 border-0">
                     <div class="d-grid">
                         <i class="fa-regular fa-circle-question text-success ms-2 mt-2 fs-4"></i>
-                        <a href="scripts.php?deleteid='.$id.'"><i class="fa-solid fa-trash-can text-danger ms-2 mt-3 fs-4"></i></a>
-                        <a href="update.php?id='.$id.'"><i class="fa-solid fa-pen-to-square text-warning ms-2 mt-2 fs-4"></i></a>
                     </div>
-                    <div class="text-start ms-2 mt-1">
+                    <div class="text-start w-100 ms-2 mt-1">
                         <div class="fw-bold text-dark ">'.$title.'</div>
                         <div class="">
                             <div class="text-secondary">#'.$id.' created in '.$date.'</div>
-                            <div class=""
-                                title="'.$description.'">'.$description.'</div>
+                            <div class="" title="'.$description.'">'.$description.'</div>
                         </div>
-                        <div class="">
-                            <span class="btn btn-primary btn-sm">'.$priority.'</span>
-                            <span class="btn bg-light-600 btn-sm">'.$type.'</span>
+                        <div class="d-flex">
+                            <div class="col-10">   
+                                <span class="btn btn-primary btn-sm">'.$priority.'</span>
+                                <span class="btn bg-light-600 btn-sm">'.$type.'</span>
+                            </div>
+                            <div class="d-flex col-2">
+                                <a href="scripts.php?deleteid='.$id.'"><i class="fa-solid fa-trash-can text-danger ms-2 mt-2 fs-4"></i></a>
+                                <a href="update.php?id='.$id.'"><i class="fa-solid fa-pen-to-square text-warning ms-2 mt-2 fs-4"></i></a>
+                            </div>
                         </div>
                     </div>
                 </button>';
@@ -47,20 +50,23 @@
                 if($status==2){
                     echo '<button class="d-flex p-2 border-0">
                     <div class="d-grid">
-                        <i class="fa fa-circle-notch fa-rotate-90 text-success ms-2 mt-2 fs-4"></i>
-                        <a href="scripts.php?deleteid='.$id.'"><i class="fa-solid fa-trash-can text-danger ms-2 mt-3 fs-4"></i></a>
-                        <a href="update.php?id='.$id.'"><i class="fa-solid fa-pen-to-square text-warning ms-2 mt-2 fs-4"></i></a>
+                        <i class="fa-regular fa-circle-question text-success ms-2 mt-2 fs-4"></i>
                     </div>
-                    <div class="text-start ms-2 mt-1">
+                    <div class="text-start w-100 ms-2 mt-1">
                         <div class="fw-bold text-dark ">'.$title.'</div>
                         <div class="">
                             <div class="text-secondary">#'.$id.' created in '.$date.'</div>
-                            <div class=""
-                                title="'.$description.'">'.$description.'</div>
+                            <div class="" title="'.$description.'">'.$description.'</div>
                         </div>
-                        <div class="">
-                            <span class="btn btn-primary btn-sm">'.$priority.'</span>
-                            <span class="btn bg-light-600 btn-sm">'.$type.'</span>
+                        <div class="d-flex">
+                            <div class="col-10">   
+                                <span class="btn btn-primary btn-sm">'.$priority.'</span>
+                                <span class="btn bg-light-600 btn-sm">'.$type.'</span>
+                            </div>
+                            <div class="d-flex col-2">
+                                <a href="scripts.php?deleteid='.$id.'"><i class="fa-solid fa-trash-can text-danger ms-2 mt-2 fs-4"></i></a>
+                                <a href="update.php?id='.$id.'"><i class="fa-solid fa-pen-to-square text-warning ms-2 mt-2 fs-4"></i></a>
+                            </div>
                         </div>
                     </div>
                 </button>';
@@ -68,20 +74,23 @@
                 if($status==3){
                     echo '<button class="d-flex p-2 border-0">
                     <div class="d-grid">
-                        <i class="fa-regular fa-circle-check text-success ms-2 mt-2 fs-4"></i>
-                        <a href="scripts.php?deleteid='.$id.'"><i class="fa-solid fa-trash-can text-danger ms-2 mt-3 fs-4"></i></a>
-                        <a href="update.php?id='.$id.'"><i class="fa-solid fa-pen-to-square text-warning ms-2 mt-2 fs-4"></i></a>
+                        <i class="fa-regular fa-circle-question text-success ms-2 mt-2 fs-4"></i>
                     </div>
-                    <div class="text-start ms-2 mt-1">
+                    <div class="text-start w-100 ms-2 mt-1">
                         <div class="fw-bold text-dark ">'.$title.'</div>
                         <div class="">
                             <div class="text-secondary">#'.$id.' created in '.$date.'</div>
-                            <div class=""
-                                title="'.$description.'">'.$description.'</div>
+                            <div class="" title="'.$description.'">'.$description.'</div>
                         </div>
-                        <div class="">
-                            <span class="btn btn-primary btn-sm">'.$priority.'</span>
-                            <span class="btn bg-light-600 btn-sm">'.$type.'</span>
+                        <div class="d-flex">
+                            <div class="col-10">   
+                                <span class="btn btn-primary btn-sm">'.$priority.'</span>
+                                <span class="btn bg-light-600 btn-sm">'.$type.'</span>
+                            </div>
+                            <div class="d-flex col-2">
+                                <a href="scripts.php?deleteid='.$id.'"><i class="fa-solid fa-trash-can text-danger ms-2 mt-2 fs-4"></i></a>
+                                <a href="update.php?id='.$id.'"><i class="fa-solid fa-pen-to-square text-warning ms-2 mt-2 fs-4"></i></a>
+                            </div>
                         </div>
                     </div>
                 </button>';
