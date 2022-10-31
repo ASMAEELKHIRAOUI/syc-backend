@@ -52,19 +52,19 @@ if($result)
                             <div><label class="form-label">Priority</label name priority></div>
                             <div><select class="form-select" id="task-priority" name="priority">
                                     <option value="">Please select</option>
-                                    <option value="Low" <?php if($row['priority']=='Low'){ print ' selected'; }?>>Low</option>
-                                    <option value="Medium" <?php if($row['priority']=='Medium'){ print ' selected'; }?>>Medium</option>
-                                    <option value="High" <?php if($row['priority']=='High'){ print ' selected'; }?>>High</option>
-                                    <option value="Critical" <?php if($row['priority']=='Critical'){ print ' selected'; }?>>Critical</option>
+                                    <option value="Low" <?php if($row['priority']=='Low'){ echo ' selected'; }?>>Low</option>
+                                    <option value="Medium" <?php if($row['priority']=='Medium'){ echo ' selected'; }?>>Medium</option>
+                                    <option value="High" <?php if($row['priority']=='High'){ echo ' selected'; }?>>High</option>
+                                    <option value="Critical" <?php if($row['priority']=='Critical'){ echo ' selected'; }?>>Critical</option>
                                 </select></div>
                             </div>
                             <div class="mb-3">
                             <div><label class="form-label">Status</label></div>
                             <div><select class="form-select" id="task-status" name="status">
                                     <option value="">Please select</option>
-                                    <option value="1" <?php if($row['status']==1){ print ' selected'; }?>>To Do</option>
-                                    <option value="2" <?php if($row['status']==2){ print ' selected'; }?>>In Progress</option>
-                                    <option value="3" <?php if($row['status']==3){ print ' selected'; }?>>Done</option>
+                                    <option value="1" <?php if($row['status']==1){ echo ' selected'; }?>>To Do</option>
+                                    <option value="2" <?php if($row['status']==2){ echo ' selected'; }?>>In Progress</option>
+                                    <option value="3" <?php if($row['status']==3){ echo ' selected'; }?>>Done</option>
                                 </select></div> 
                             </div>
                             <div class="mb-3">

@@ -124,8 +124,10 @@
         $description = $_POST['description'];
         $sql = "UPDATE tasks SET title='$title',type='$type',status='$status',priority='$priority',date_time='$date',description='$description' WHERE id=$id";
         $result=mysqli_query($connect,$sql);
-        $_SESSION['message'] = "Task has been updated successfully !";
-        header('location: index.php');
+        if($result){
+            $_SESSION['message'] = "Task has been updated successfully !";
+            header('location: index.php');
+        }
     }
 
     function deleteTask()
