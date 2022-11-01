@@ -38,11 +38,11 @@ if($result)
                                 <?php $type= $row['type']; ?> 
                                 <div class="ms-3">
                                     <div class="form-check mb-1">
-                                        <input class="form-check-input" name="type" type="radio" value="Feature" <?php echo ($type== 'Feature') ?  "checked" : "" ;  ?> id="task-type-feature"/>
+                                        <input class="form-check-input" name="type" type="radio" value="Feature" <?php echo ($type== '1') ?  "checked" : "" ;  ?> id="task-type-feature"/>
                                         <label class="form-check-label" for="task-type-feature">Feature</label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" name="type" type="radio" value="Bug" <?php echo ($type== 'Bug') ?  "checked" : "" ;  ?> id="task-type-bug"/>
+                                        <input class="form-check-input" name="type" type="radio" value="Bug" <?php echo ($type== '2') ?  "checked" : "" ;  ?> id="task-type-bug"/>
                                         <label class="form-check-label" for="task-type-bug">Bug</label>
                                     </div>
                                 </div>
@@ -52,10 +52,10 @@ if($result)
                             <div><label class="form-label">Priority</label name priority></div>
                             <div><select class="form-select" id="task-priority" name="priority">
                                     <option value="">Please select</option>
-                                    <option value="Low" <?php if($row['priority']=='Low'){ echo ' selected'; }?>>Low</option>
-                                    <option value="Medium" <?php if($row['priority']=='Medium'){ echo ' selected'; }?>>Medium</option>
-                                    <option value="High" <?php if($row['priority']=='High'){ echo ' selected'; }?>>High</option>
-                                    <option value="Critical" <?php if($row['priority']=='Critical'){ echo ' selected'; }?>>Critical</option>
+                                    <option value="Low" <?php if($row['priority']=='1'){ echo ' selected'; }?>>Low</option>
+                                    <option value="Medium" <?php if($row['priority']=='2'){ echo ' selected'; }?>>Medium</option>
+                                    <option value="High" <?php if($row['priority']=='3'){ echo ' selected'; }?>>High</option>
+                                    <option value="Critical" <?php if($row['priority']=='4'){ echo ' selected'; }?>>Critical</option>
                                 </select></div>
                             </div>
                             <div class="mb-3">
