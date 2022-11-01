@@ -118,11 +118,13 @@
         $date = $_POST['date_time'];
         $description = $_POST['description'];
         //SQL SELECT
-        $sql = "INSERT INTO tasks VALUES (null, '$title','$type','$status','$priority','$date','$description')";
+        $sql = "INSERT INTO tasks VALUES (null, '$title','$type','$priority','$status','$date','$description')";
         $result=mysqli_query($connect,$sql);
         //SQL INSERT
         if($result){
             $_SESSION['message'] = "Task has been added successfully !";
+            unset($_POST);
+            $_POST = array();
             header('location: index.php');
         }
     }
@@ -132,12 +134,12 @@
         $connect = connection();
         $id = $_POST['id'];
         $title = $_POST['title'];
-        $type = $_POST['type_id'];
-        $status = $_POST['status_id'];
-        $priority = $_POST['priority_id'];
-        $date = $_POST['task_datetime'];
+        $type = $_POST['type'];
+        $status = $_POST['status'];
+        $priority = $_POST['priority'];
+        $date = $_POST['date_time'];
         $description = $_POST['description'];
-        $sql = "UPDATE tasks SET title='$title',type='$type',status='$status',priority='$priority',date_time='$date',description='$description' WHERE id=$id";
+        $sql = "UPDATE tasks SET title = '$title', `type_id` = '$type',priority_id = '$priority', status_id = '$status',task_datetime = '$date', description = '$description' WHERE id = '$id'";
         $result=mysqli_query($connect,$sql);
         if($result){
             $_SESSION['message'] = "Task has been updated successfully !";

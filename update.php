@@ -21,7 +21,7 @@ if($result)
 <div class="container">
         <div class="">
             <div class="">
-                <form action="update.php" method="POST" id="form-task">
+                <form method="POST" id="form-task">
                     <div class="modal-header">
                         <h5 class="modal-title">Edit Task</h5>
                         <a href="#" class="btn-close" data-bs-dismiss="modal"></a>
@@ -35,14 +35,14 @@ if($result)
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Type</label>
-                                <?php $type= $row['type']; ?> 
+                                <?php $type= $row['type_id']; ?> 
                                 <div class="ms-3">
                                     <div class="form-check mb-1">
-                                        <input class="form-check-input" name="type" type="radio" value="Feature" <?php echo ($type== '1') ?  "checked" : "" ;  ?> id="task-type-feature"/>
+                                        <input class="form-check-input" name="type" type="radio" value="1" <?php echo ($type== '1') ?  "checked" : "" ;  ?> id="task-type-feature"/>
                                         <label class="form-check-label" for="task-type-feature">Feature</label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" name="type" type="radio" value="Bug" <?php echo ($type== '2') ?  "checked" : "" ;  ?> id="task-type-bug"/>
+                                        <input class="form-check-input" name="type" type="radio" value="2" <?php echo ($type== '2') ?  "checked" : "" ;  ?> id="task-type-bug"/>
                                         <label class="form-check-label" for="task-type-bug">Bug</label>
                                     </div>
                                 </div>
@@ -52,24 +52,24 @@ if($result)
                             <div><label class="form-label">Priority</label name priority></div>
                             <div><select class="form-select" id="task-priority" name="priority">
                                     <option value="">Please select</option>
-                                    <option value="Low" <?php if($row['priority']=='1'){ echo ' selected'; }?>>Low</option>
-                                    <option value="Medium" <?php if($row['priority']=='2'){ echo ' selected'; }?>>Medium</option>
-                                    <option value="High" <?php if($row['priority']=='3'){ echo ' selected'; }?>>High</option>
-                                    <option value="Critical" <?php if($row['priority']=='4'){ echo ' selected'; }?>>Critical</option>
+                                    <option value="1" <?php if($row['priority_id']=='1'){ echo ' selected'; }?>>Low</option>
+                                    <option value="2" <?php if($row['priority_id']=='2'){ echo ' selected'; }?>>Medium</option>
+                                    <option value="3" <?php if($row['priority_id']=='3'){ echo ' selected'; }?>>High</option>
+                                    <option value="4" <?php if($row['priority_id']=='4'){ echo ' selected'; }?>>Critical</option>
                                 </select></div>
                             </div>
                             <div class="mb-3">
                             <div><label class="form-label">Status</label></div>
                             <div><select class="form-select" id="task-status" name="status">
                                     <option value="">Please select</option>
-                                    <option value="1" <?php if($row['status']==1){ echo ' selected'; }?>>To Do</option>
-                                    <option value="2" <?php if($row['status']==2){ echo ' selected'; }?>>In Progress</option>
-                                    <option value="3" <?php if($row['status']==3){ echo ' selected'; }?>>Done</option>
+                                    <option value="1" <?php if($row['status_id']==1){ echo ' selected'; }?>>To Do</option>
+                                    <option value="2" <?php if($row['status_id']==2){ echo ' selected'; }?>>In Progress</option>
+                                    <option value="3" <?php if($row['status_id']==3){ echo ' selected'; }?>>Done</option>
                                 </select></div> 
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Date</label>
-                                <input type="date" class="form-control" id="task-date" name ="date_time" value="<?php echo $row['date_time'] ?>"/>
+                                <input type="date" class="form-control" id="task-date" name ="date_time" value="<?php echo $row['task_datetime'] ?>"/>
                             </div>
                             <div class="mb-0">
                                 <label class="form-label">Description</label>
