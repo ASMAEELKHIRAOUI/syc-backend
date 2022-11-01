@@ -9,7 +9,7 @@
     if(isset($_POST['update']))      updateTask();
     if(isset($_GET['deleteid']))     deleteTask();
     
-    function getTasks($a){
+    function getTasks($status){
         //CODE HERE
         $connect = connection();
         $sql= "SELECT tasks.id, tasks.title , tasks.priority_id, types.name as type, priorities.name as priority, tasks.task_datetime, tasks.description FROM tasks
@@ -18,17 +18,17 @@
         INNER JOIN priorities
         ON priorities.id = tasks.priority_id
         INNER JOIN statuses
-        ON statuses.id = tasks.status_id where status_id = $a;";
+        ON statuses.id = tasks.status_id where status_id = $status;";
         $result=mysqli_query($connect,$sql);
         if($result){
             while($row=mysqli_fetch_assoc($result)){
                 $id = $row['id'];
                 $title = $row['title'];
                 $type = $row['type'];
-                $priority = $row['priority_id'];
+                $priority = $row['priority'];
                 $date = $row['task_datetime'];
                 $description = $row['description'];
-                if($a==1){
+                if($status==1){
                     echo '<button class="d-flex p-2 border-0">
                     <div class="d-grid">
                         <i class="fa-regular fa-circle-question text-success ms-2 mt-2 fs-4"></i>
@@ -52,7 +52,7 @@
                     </div>
                 </button>';
                 }
-                if($a==2){
+                if($status==2){
                     echo '<button class="d-flex p-2 border-0">
                     <div class="d-grid">
                         <i class="fa fa-circle-notch fa-rotate-90 text-success ms-2 mt-2 fs-4"></i>
@@ -76,7 +76,7 @@
                     </div>
                 </button>';
                 }
-                if($a==3){
+                if($status==3){
                     echo '<button class="d-flex p-2 border-0">
                     <div class="d-grid">
                         <i class="fa-regular fa-circle-check text-success ms-2 mt-2 fs-4"></i>
