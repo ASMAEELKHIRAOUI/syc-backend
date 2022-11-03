@@ -349,13 +349,13 @@
 							<input type="hidden" id="task-id" name = 'id'>
 							<div class="mb-3">
 								<label class="form-label">Title</label>
-								<input type="text" class="form-control" id="task-title" name ='title'/>
+								<input type="text" class="form-control" id="task-title" name ='title' required/>
 							</div>
 							<div class="mb-3">
 								<label class="form-label">Type</label>
 								<div class="ms-3">
 									<div class="form-check mb-1">
-										<input class="form-check-input" name="type" type="radio" value="1" id="task-type-feature"/>
+										<input class="form-check-input" name="type" type="radio" value="1" id="task-type-feature" checked/>
 										<label class="form-check-label" for="task-type-feature">Feature</label>
 									</div>
 									<div class="form-check">
@@ -367,7 +367,7 @@
 							</div>
 							<div class="mb-3">
 								<label class="form-label">Priority</label name priority>
-								<select class="form-select" id="task-priority" name="priority">
+								<select class="form-select" id="task-priority" name="priority" required>
 									<option value="">Please select</option>
 									<option value="1">Low</option>
 									<option value="2">Medium</option>
@@ -377,7 +377,7 @@
 							</div>
 							<div class="mb-3">
 								<label class="form-label">Status</label>
-								<select class="form-select" id="task-status" name="status">
+								<select class="form-select" id="task-status" name="status" required>
 									<option value="">Please select</option>
 									<option value="1">To Do</option>
 									<option value="2">In Progress</option>
@@ -386,11 +386,11 @@
 							</div>
 							<div class="mb-3">
 								<label class="form-label">Date</label>
-								<input type="date" class="form-control" id="task-date" name ='date_time'/>
+								<input type="date" class="form-control" id="task-date" name ='date_time' required/>
 							</div>
 							<div class="mb-0">
 								<label class="form-label">Description</label>
-								<textarea class="form-control" rows="10" id="task-description" name='description' ></textarea>
+								<textarea class="form-control" rows="10" id="task-description" name='description' required></textarea>
 							</div>
 						
 					</div>
