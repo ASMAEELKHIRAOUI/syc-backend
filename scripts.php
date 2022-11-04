@@ -25,7 +25,7 @@
                 if($status==1){
                     echo '<button class="d-flex p-2 border-0">
                     <div class="d-grid">
-                        <i class="fa-regular fa-circle-question text-success ms-2 mt-2 fs-4"></i>
+                        <i class="far fa-question-circle text-success ms-2 mt-2 fs-4"></i>
                     </div>
                     <div class="text-start w-100 ms-2 mt-1">
                         <div class="fw-bold text-dark ">'.$title.'</div>
@@ -35,8 +35,8 @@
                         </div>
                         <div class="d-flex">
                             <div class="col-10">   
-                                <span class="btn btn-primary btn-sm">'.$priority.'</span>
-                                <span class="btn bg-light-600 btn-sm">'.$type.'</span>
+                                <span class="badge bg-primary">'.$priority.'</span>
+                                <span class="badge bg-gray-300 text-gray-900">'.$type.'</span>
                             </div>
                             <div class="d-flex col-2">
                                 <a href="scripts.php?deleteid='.$id.'"><i class="fa-solid fa-trash-can text-danger ms-2 mt-2 fs-4"></i></a>
@@ -49,7 +49,7 @@
                 if($status==2){
                     echo '<button class="d-flex p-2 border-0">
                     <div class="d-grid">
-                        <i class="fa fa-circle-notch fa-rotate-90 text-success ms-2 mt-2 fs-4"></i>
+                        <i class="fa fa-circle-notch fa-spin text-success ms-2 mt-2 fs-4"></i>
                     </div>
                     <div class="text-start w-100 ms-2 mt-1">
                         <div class="fw-bold text-dark ">'.$title.'</div>
@@ -59,8 +59,8 @@
                         </div>
                         <div class="d-flex">
                             <div class="col-10">   
-                                <span class="btn btn-primary btn-sm">'.$priority.'</span>
-                                <span class="btn bg-light-600 btn-sm">'.$type.'</span>
+                                <span class="badge bg-primary">'.$priority.'</span>
+                                <span class="badge bg-gray-300 text-gray-900">'.$type.'</span>
                             </div>
                             <div class="d-flex col-2">
                                 <a href="scripts.php?deleteid='.$id.'"><i class="fa-solid fa-trash-can text-danger ms-2 mt-2 fs-4"></i></a>
@@ -73,7 +73,7 @@
                 if($status==3){
                     echo '<button class="d-flex p-2 border-0">
                     <div class="d-grid">
-                        <i class="fa-regular fa-circle-check text-success ms-2 mt-2 fs-4"></i>
+                        <i class="far fa-circle-check text-success ms-2 mt-2 fs-4"></i>
                     </div>
                     <div class="text-start w-100 ms-2 mt-1">
                         <div class="fw-bold text-dark ">'.$title.'</div>
@@ -83,8 +83,8 @@
                         </div>
                         <div class="d-flex">
                             <div class="col-10">   
-                                <span class="btn btn-primary btn-sm">'.$priority.'</span>
-                                <span class="btn bg-light-600 btn-sm">'.$type.'</span>
+                                <span class="badge bg-primary">'.$priority.'</span>
+                                <span class="badge bg-gray-300 text-gray-900">'.$type.'</span>
                             </div>
                             <div class="d-flex col-2">
                                 <a href="scripts.php?deleteid='.$id.'"><i class="fa-solid fa-trash-can text-danger ms-2 mt-2 fs-4"></i></a>
