@@ -12,7 +12,7 @@
     function getTasks($status){
         //CODE HERE
         $connect = connection();
-        $sql= "SELECT tasks.id, tasks.title , tasks.priority_id, types.name as type, priorities.name as priority, tasks.task_datetime, tasks.description FROM tasks INNER JOIN types ON types.id = tasks.type_id INNER JOIN priorities ON priorities.id = tasks.priority_id INNER JOIN statuses ON statuses.id = tasks.status_id where status_id = $status;";
+        $sql= "SELECT tasks.id, tasks.title , tasks.priority_id, types.name type, priorities.name priority, tasks.task_datetime, tasks.description FROM tasks INNER JOIN types ON types.id = tasks.type_id INNER JOIN priorities ON priorities.id = tasks.priority_id INNER JOIN statuses ON statuses.id = tasks.status_id WHERE status_id = $status;";
         $result=mysqli_query($connect,$sql);
         if($result){
             while($row=mysqli_fetch_assoc($result)){
